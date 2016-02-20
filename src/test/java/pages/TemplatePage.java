@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +18,10 @@ public class TemplatePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(css = ".button.btn-important.btn-big-height.tm-icon.cart-icon.js-button-add-to-cart.btn-full-width")
+	@FindBy(css = "#collapse0 .add-to-cart button")
 	public WebElement addToCartButt;
-
-	@FindBy(css = ".modal-dialog .button.btn-important.btn-big-height.btn-full-width.tm-icon.wallet-icon.js-checkout-button.big-loading")
+	
+	@FindBy(css = ".checkout-button button")
 	public WebElement checkoutNowButt;
 
 	@FindBy(css = ".preview-heading")
@@ -36,6 +38,12 @@ public class TemplatePage {
 
 	@FindBy(css = ".button.btn-important.btn-full-width.tm-icon.download-icon.js-button-download-sample.onp-sociallocker-content")
 	public WebElement downloadTemplateButt;
+	
+	@FindBy(css = ".key-feature>img")
+	public List<WebElement> pictures;
+	
+	
+	
 
 	public String addTemplateToCart(int i) {
 

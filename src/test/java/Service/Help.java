@@ -8,6 +8,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -140,7 +143,8 @@ public class Help extends WebDrInit {
 	}
 
 	public static boolean isElementPresent(WebElement el) {
-		  return el.getSize().height > 0;
+//		  return el.getSize().height > 0;
+		  return el.isDisplayed();
 		}
 	
 	public static   WebElement waitForElement(int wait, WebElement el) {
@@ -193,6 +197,14 @@ public class Help extends WebDrInit {
 		Action move = builder.moveToElement(e).build();
 		move.perform();
 		Thread.sleep(500);
+	}
+	
+	public static int getResponseCode(String urlString) throws MalformedURLException, IOException{
+	    URL url = new URL(urlString);
+	    HttpURLConnection huc = (HttpURLConnection)url.openConnection();
+	    huc.setRequestMethod("GET");
+	    huc.connect();
+	    return huc.getResponseCode();
 	}
 	// ----------------------------------------------------------------
 

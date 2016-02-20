@@ -3,13 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests._07_case8">
+      <class name="Tests._09_case10">
         <methods>
-          <include name="_16_T_LiveChat"/>
+          <include name="_25_T_EmailTest"/>
+          <include name="_18_T_EmailTest"/>
+          <include name="_23_T_EmailTest"/>
           <include name="setUp"/>
+          <include name="_22_T_EmailTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- Tests._07_case8 -->
+      </class> <!-- Tests._09_case10 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

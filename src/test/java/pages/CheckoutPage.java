@@ -93,6 +93,9 @@ public class CheckoutPage {
 	
 	@FindBy(css = ".breadcrumb > li.js-step-link")
 	public List<WebElement> breadcrumbItems;
+	
+	@FindBy(xpath = ".//div[contains(text(), 'Please specify a valid email')]")
+	public WebElement emailWarning;
 
 	
 	

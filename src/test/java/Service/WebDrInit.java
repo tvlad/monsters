@@ -79,7 +79,7 @@ public class WebDrInit {
 		driver.manage().deleteAllCookies();
 		
 		headerPage.geoPositionDisButt.click();
-		headerPage.closeBanner();
+//		headerPage.closeBanner();
 		
 //		driver.manage().deleteAllCookies();
 	

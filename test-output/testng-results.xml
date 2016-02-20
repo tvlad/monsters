@@ -2,27 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21055" started-at="2016-02-17T16:41:03Z" finished-at="2016-02-17T16:41:24Z">
+  <suite name="Default suite" duration-ms="28251" started-at="2016-02-20T19:13:40Z" finished-at="2016-02-20T19:14:08Z">
     <groups>
       <group name="mainPage">
-        <method signature="_07_case8._16_T_LiveChat()[pri:0, instance:Tests._07_case8@56cbfb61]" name="_16_T_LiveChat" class="Tests._07_case8"/>
+        <method signature="_09_case10._18_T_EmailTest()[pri:0, instance:Tests._09_case10@7d417077]" name="_18_T_EmailTest" class="Tests._09_case10"/>
       </group> <!-- mainPage -->
     </groups>
-    <test name="Default test" duration-ms="21055" started-at="2016-02-17T16:41:03Z" finished-at="2016-02-17T16:41:24Z">
-      <class name="Tests._07_case8">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests._07_case8@56cbfb61]" name="setUp" is-config="true" duration-ms="7917" started-at="2016-02-17T18:41:03Z" finished-at="2016-02-17T18:41:11Z">
+    <test name="Default test" duration-ms="28251" started-at="2016-02-20T19:13:40Z" finished-at="2016-02-20T19:14:08Z">
+      <class name="Tests._09_case10">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests._09_case10@7d417077]" name="setUp" is-config="true" duration-ms="9743" started-at="2016-02-20T21:13:40Z" finished-at="2016-02-20T21:13:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="_16_T_LiveChat()[pri:0, instance:Tests._07_case8@56cbfb61]" name="_16_T_LiveChat" duration-ms="13120" started-at="2016-02-17T18:41:11Z" finished-at="2016-02-17T18:41:24Z">
+        <test-method status="PASS" signature="_18_T_EmailTest()[pri:0, instance:Tests._09_case10@7d417077]" name="_18_T_EmailTest" duration-ms="18496" started-at="2016-02-20T21:13:50Z" finished-at="2016-02-20T21:14:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- _16_T_LiveChat -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Tests._07_case8@56cbfb61]" name="tearDown" is-config="true" duration-ms="1" started-at="2016-02-17T18:41:24Z" finished-at="2016-02-17T18:41:24Z">
+        </test-method> <!-- _18_T_EmailTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Tests._09_case10@7d417077]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-02-20T21:14:08Z" finished-at="2016-02-20T21:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests._07_case8 -->
+      </class> <!-- Tests._09_case10 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
