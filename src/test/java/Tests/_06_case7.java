@@ -12,7 +12,11 @@ import Service.WebDrInit;
 
 public class _06_case7 extends WebDrInit {
 	/*
-	 * Verify "login with Login/Password"
+	 * Предусловие: в корзине пользователя хранятся продукты 
+	 * 1. Незалогиненным пользователем положить в корзину продукты 
+	 * 2. Авторизоваться на степе 1 чекаута 
+	 * 3. Перейти на страницу шоппинг карты и удалить некоторые продукты
+	 * из корзины (нажать крестик возле выбранного продукта)
 	 */
 
 
@@ -20,7 +24,7 @@ public class _06_case7 extends WebDrInit {
 	private int sumAllAfter = 0;
 	private int deletedPrice = 0;
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _12_T_addToCartForLoginUser() throws InterruptedException, AWTException {
 
 		headerPage.signIn(Email, Password);
@@ -35,7 +39,7 @@ public class _06_case7 extends WebDrInit {
 
 	}
 
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _13_T_addToCartAndThenAuthorized() throws InterruptedException, AWTException {
 		Thread.sleep(1000);
 		headerPage.closeBanner();
@@ -62,12 +66,12 @@ public class _06_case7 extends WebDrInit {
 		
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _14_T_() throws InterruptedException {
 		Assert.assertNotEquals(sumAllBefor, sumAllAfter);
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _15_T_() throws InterruptedException {
 		Assert.assertEquals(deletedPrice, sumAllBefor - sumAllAfter);
 	}

@@ -7,98 +7,69 @@ import Service.WebDrInit;
 
 public class _09_case10 extends WebDrInit {
 	/*
-	 * Verify "login with Login/Password"
+	 * 1. Добавить в корзину платный шаблон и перейти на чекаут 
+	 * 2. На степе 1 чекаута выбрать “I’m returning customer” 
+	 * 3. Ввести невалидный email (мин. 10 вариантов) 
+	 * 4. Установить фокус в поле ввода пароля
 	 */
 
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _18_T_EmailTest() throws InterruptedException {
 		headerPage.signOut();
 		templatePage.addTemplateToCart(0);
 		templatePage.checkoutNowButt.click();
 		checkoutPage.returningCustomerRadioButt.click();
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys(" @ . ");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail(" @ . ");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _19_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvladgmail.com");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvladgmail.com");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _20_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad@gmailcom");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvlad@gmailcom");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _21_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvladgmailcom");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvladgmailcom");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _22_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad@ce.mintemail.com");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvlad@ce.mintemail.com");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _23_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad/@ce.mintemail.com");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvlad/@ce.mintemail.com");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _24_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad@mintemail.");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvlad@mintemail.");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _25_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad{@mintemail.com");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvlad{@mintemail.com");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _26_T_EmailTest() throws InterruptedException {
-		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad @mintemail.com");
-		checkoutPage.passwordFieldForSignIn.click();
-		checkoutPage.signInSubmitButt.click();
-		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());
+		fillOutEmail("tvlad @mintemail.com");
 	}
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _27_T_EmailTest() throws InterruptedException {
+		fillOutEmail("tvlad@ mintemail.com");
+	}
+	
+	private void fillOutEmail(String email){
 		checkoutPage.emailFieldForSignIn.clear();
-		checkoutPage.emailFieldForSignIn.sendKeys("tvlad@ mintemail.com");
+		checkoutPage.emailFieldForSignIn.sendKeys(email);
 		checkoutPage.passwordFieldForSignIn.click();
 		checkoutPage.signInSubmitButt.click();
 		Assert.assertTrue(checkoutPage.emailWarning.isDisplayed());

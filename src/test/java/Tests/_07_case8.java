@@ -14,7 +14,9 @@ import Service.WebDrInit;
 
 public class _07_case8 extends WebDrInit {
 	/*
-	 * Verify "login with Login/Password"
+	 * 1. Зайти на проект (индексная страница) 
+	 * 2. Заполнить корректными значениями поля чата Your Name и Email Address 
+	 * 3. Нажать Enter/кнопку Start Chat
 	 */
 
 	

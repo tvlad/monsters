@@ -88,8 +88,8 @@ public class WebDrInit {
 	
 	@AfterClass
 	public void tearDown() throws Exception {
-//		driver.close();
-//		driver.quit();
+		driver.close();
+		driver.quit();
 		
 	}
 	

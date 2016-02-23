@@ -9,11 +9,13 @@ import Service.WebDrInit;
 
 public class _03_case04 extends WebDrInit {
 	/*
-	 * Verify "login with Login/Password"
+	 * 1. Добавить в корзину платный шаблони перейти на чекаут 
+	 * 2. На степе 1 чекаута авторизоваться существующим пользователем 
+	 * 3. На степе 3 чекаута выполнить покупку через TransactPro (Pay by CARD)
 	 */
 
 	
-	@Test(groups = "mainPage")
+	@Test(groups = "main")
 	public void _04_T_newCustomerPayment() throws InterruptedException {
 		
 		headerPage.signOut();
